@@ -4,11 +4,11 @@ import { cn } from '../../utils/cn'
 export const HolographicPanel = ({ children, className, accent="#00D4FF", glow=false }: { children: React.ReactNode, className?: string, accent?: string, glow?: boolean }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={cn(
-        "relative bg-[#0A0A14]/80 backdrop-blur-xl border overflow-hidden scanline",
+        "relative bg-[#0A0A14]/80 backdrop-blur-xl border scanline",
         glow ? "shadow-[0_0_30px_rgba(0,212,255,0.15)]" : "",
         className
       )}
