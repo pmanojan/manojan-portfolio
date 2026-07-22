@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+}
+
+body {
+  background: #050505;
+  color: #C0C0C0;
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Marvel Theme Custom */
+:root {
+  --marvel-red: #E23636;
+  --arc-blue: #00D4FF;
+  --stark-gold: #FFD700;
+  --shield-silver: #C0C0C0;
+  --deep-black: #050505;
+  --cosmic-dark: #0A0A14;
+  --vibranium-purple: #7B00FF;
+  --infinity-teal: #00FFD1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#E23636, #00D4FF); border-radius: 4px; }
+
+/* Scanline */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+.scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 212, 255, 0.03) 2px,
+    rgba(0, 212, 255, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* Hud corners */
+.hud-corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 212, 255, 0.5);
+}
+.hud-corner.tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.hud-corner.tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+.hud-corner.bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+.hud-corner.br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+
+/* Hex clip */
+.hex-clip {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hex-clip-sm {
+  clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+}
+
+/* Circuit background */
+.circuit-bg {
+  background-image: 
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Glow text */
+.glow-blue { text-shadow: 0 0 10px #00D4FF, 0 0 20px #00D4FF40; }
+.glow-red { text-shadow: 0 0 10px #E23636, 0 0 20px #E2363640; }
+.glow-gold { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD70040; }
+
+/* Redacted */
+.redacted {
+  background: #000;
+  color: transparent;
+  position: relative;
+  user-select: none;
+  display: inline-block;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.redacted.revealed {
+  background: transparent;
+  color: inherit;
+}
+
+/* Arc reactor pulse */
+@keyframes arc-pulse {
+  0%, 100% { box-shadow: 0 0 20px #00D4FF, 0 0 40px #00D4FF60, inset 0 0 20px #00D4FF40; }
+  50% { box-shadow: 0 0 30px #00D4FF, 0 0 60px #00D4FF80, inset 0 0 30px #00D4FF60; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

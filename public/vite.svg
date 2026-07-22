@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="16" cy="16" r="15" fill="url(#g)" stroke="#00D4FF" stroke-width="1.5"/>
+  <circle cx="16" cy="16" r="11" fill="none" stroke="#00D4FF" stroke-width="0.5" stroke-dasharray="3 2" opacity="0.6"/>
+  <text x="16" y="20" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="14" font-weight="700" fill="white" filter="url(#glow)" letter-spacing="1">PM</text>
+  <circle cx="16" cy="16" r="2" fill="#E23636" opacity="0.8"/>
+</svg>
