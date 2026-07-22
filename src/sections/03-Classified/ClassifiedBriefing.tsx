@@ -67,7 +67,17 @@ export const ClassifiedBriefing = () => {
                       boxShadow: "0 25px 60px rgba(0,212,255,0.4), 0 0 0 1px rgba(0,212,255,0.2), inset 0 0 40px rgba(0,212,255,0.2), inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 8px rgba(0,0,0,0.8)"
                     } as any}
                   >
-                    <img src="https://github.com/pmanojan/manojan-portfolio/blob/main/public/assets/profile.jpeg" alt="Pemaraj Manojan" className="w-full h-full object-cover rounded-full" style={{ filter: "contrast(1.1) saturate(1.15)" }} onError={(e) => { (e.target as HTMLImageElement).src = "https://github.com/pmanojan/manojan-portfolio/blob/main/public/assets/profile.jpg" }} />
+                    <img
+  src="/assets/profile.jpeg"
+  alt="Pemaraj Manojan"
+  className="w-full h-full object-cover rounded-full"
+  style={{ 
+    filter: "contrast(1.1) saturate(1.15)" 
+  }}
+  onError={(e) => {
+    (e.target as HTMLImageElement).src = "/assets/profile.jpg";
+  }}
+/>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/25 via-transparent to-transparent pointer-events-none mix-blend-overlay" />
                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#00D4FF]/25 via-transparent to-[#FFD700]/10 pointer-events-none" />
                   </div>

@@ -7,12 +7,12 @@
   "author": "Pemaraj Manojan <manojmanojan1392@gmail.com> (https://pmanojan.github.io/manojan-portfolio/)",
   "copyright": "© 2026 Pemaraj Manojan — All Rights Reserved — Custom Restrictive License — No Sell / No Claim As Own",
   "scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "preview": "vite preview",
-  "lint": "echo lint",
-  "deploy": "gh-pages -d dist"
-},
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "echo lint",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.105.6",
