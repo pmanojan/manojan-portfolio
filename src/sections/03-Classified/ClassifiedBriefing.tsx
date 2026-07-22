@@ -72,11 +72,11 @@ export const ClassifiedBriefing = () => {
                     } as any}
                   >
                     <img 
-                      src="/assets/profile.jpeg" 
+                      src="https://github.com/pmanojan/manojan-portfolio/blob/main/public/assets/profile.jpeg" 
                       alt="Pemaraj Manojan — IT Administrator Jaffna" 
                       className="w-full h-full object-cover rounded-full"
                       style={{ filter: "contrast(1.1) saturate(1.15)" }}
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/assets/profile.jpg" }}
+                      onError={(e) => { (e.target as HTMLImageElement).src = "https://github.com/pmanojan/manojan-portfolio/blob/main/public/assets/profile.jpeg" }}
                     />
                     {/* 3D lighting overlays */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/25 via-transparent to-transparent pointer-events-none mix-blend-overlay" style={{ transform: "translateZ(10px)" } as any} />
