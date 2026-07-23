@@ -4,14 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE",
-  "author": "Pemaraj Manojan <manojmanojan1392@gmail.com> (https://pmanojan.github.io/manojan-portfolio/)",
+  "author": "Pemaraj Manojan <manojmanojan1392@gmail.com> (https://pemarajmanojan.dev/)",
   "copyright": "© 2026 Pemaraj Manojan — All Rights Reserved — Custom Restrictive License — No Sell / No Claim As Own",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "echo lint",
-    "deploy": "gh-pages -d dist"
+    "lint": "echo lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -36,7 +35,6 @@
     "@types/three": "^0.163.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
